@@ -1,0 +1,12 @@
+.typed-cursor {
+    color: #d88916;        /* laranja */
+    font-weight: 100;      /* fino */
+    font-size: inherit;    /* mesmo tamanho do texto */
+    opacity: 1;
+    animation: typed-blink 0.8s infinite;
+}
+
+@keyframes typed-blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}

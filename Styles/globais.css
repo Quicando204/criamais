@@ -1,0 +1,129 @@
+
+                /* WhatsApp Widget CRIA+ */
+
+#wa-bubble-typing {
+  background: #fff;
+  border-radius: 0 8px 8px 8px;
+  padding: 10px 14px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.wa-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #aaa;
+  margin: 0 2px;
+  animation: waBounce 1.2s infinite;
+}
+.wa-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.wa-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes waBounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-6px);
+  }
+}
+.wa-msg {
+  display: none;
+}
+.wa-bubble {
+  background: #fff;
+  border-radius: 0 8px 8px 8px;
+  padding: 8px 12px;
+  display: inline-block;
+  max-width: 220px;
+  font-size: 13px;
+  color: #303030;
+  margin-bottom: 8px;
+}
+.wa-time {
+  display: block;
+  text-align: right;
+  font-size: 10px;
+  color: #aaa;
+  margin-top: 2px;
+}
+ 
+        
+        /*FOOOTER*/
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  background-color: #171717;
+  color: white;
+}
+
+footer > div {
+  padding: 8px;
+}
+
+footer > div a {
+  text-decoration: none;
+  color: white;
+}
+footer > div a:hover {
+  text-decoration: underline;
+}
+
+footer > div > h3 {
+  color: #d88916;
+  font-size: 2em;
+}
+
+footer h3,
+footer h1 {
+  margin-bottom: 10px;
+}
+
+div.link-footer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0px;
+}
+
+#info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-items: center;
+  gap: 15px;
+  /* display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  background-color: #d88916;
+  padding: 20px 10px;
+  color: white;
+}
+
+#info div.link {
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.link a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+#info div {
+  padding: 10px;
+}
+
+
+
+

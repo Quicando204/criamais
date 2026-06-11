@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orçamento — CRIA+</title>
+    <link rel="shortcut icon" href="../favicon/favicon.png" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --cream: #f5f0e8;
+        --dark: #1a1714;
+        --gold: #c9a96e;
+        --gold-light: #e8d5b0;
+        --mid: #6b6460;
+        --white: #fdfcfa;
+        --border: rgba(201, 169, 110, 0.25);
+      }
+
+      body {
+        background: var(--dark);
+        font-family: "DM Sans", sans-serif;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 50% at 80% 20%,
+            rgba(201, 169, 110, 0.08) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 40% 60% at 10% 80%,
+            rgba(201, 169, 110, 0.05) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 640px;
+        position: relative;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 1rem;
+        animation: fadeDown 0.8s ease both;
+      }
+
+      .tagline {
+        font-size: 0.75rem;
+        font-weight: 300;
+        letter-spacing: 0.3em;
+        color: var(--mid);
+        text-transform: uppercase;
+        margin-top: 0.5rem;
+      }
+
+      .divider {
+        width: 40px;
+        height: 1px;
+        background: var(--gold);
+        margin: 1.5rem auto;
+        opacity: 0.6;
+      }
+
+      .title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--cream);
+        letter-spacing: 0.05em;
+      }
+
+      .card {
+        background: rgba(245, 240, 232, 0.04);
+        border: 1px solid var(--border);
+        border-radius: 2px;
+        padding: 2.5rem;
+        backdrop-filter: blur(10px);
+        animation: fadeUp 0.8s 0.2s ease both;
+      }
+
+      .section-label {
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.25em;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .section-label::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+      }
+
+      .section {
+        margin-bottom: 2rem;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .field {
+        margin-bottom: 1.25rem;
+        position: relative;
+      }
+
+      .field:last-child {
+        margin-bottom: 0;
+      }
+
+      label {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        color: var(--mid);
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        background: rgba(245, 240, 232, 0.05);
+        border: 1px solid rgba(201, 169, 110, 0.2);
+        border-radius: 1px;
+        color: var(--cream);
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 300;
+        padding: 0.75rem 1rem;
+        transition:
+          border-color 0.3s,
+          background 0.3s;
+        outline: none;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: rgba(245, 240, 232, 0.2);
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--gold);
+        background: rgba(201, 169, 110, 0.06);
+      }
+
+      select {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9A96E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        padding-right: 2.5rem;
+        cursor: pointer;
+      }
+
+      select option {
+        background: #2a2420;
+        color: var(--cream);
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+        line-height: 1.6;
+      }
+
+      .tipos-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
+      }
+
+      .tipo-item {
+        position: relative;
+      }
+
+      .tipo-item input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .tipo-item label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0.65rem 0.5rem;
+        border: 1px solid rgba(201, 169, 110, 0.2);
+        border-radius: 1px;
+        cursor: pointer;
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        color: var(--mid);
+        transition: all 0.25s;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+
+      .tipo-item input:checked + label {
+        border-color: var(--gold);
+        background: rgba(201, 169, 110, 0.1);
+        color: var(--gold);
+      }
+
+      .tipo-item label:hover {
+        border-color: rgba(201, 169, 110, 0.5);
+        color: var(--cream);
+      }
+
+      .btn {
+        width: 100%;
+        background: var(--gold);
+        color: var(--dark);
+        border: none;
+        border-radius: 1px;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        padding: 1.1rem 2rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+      }
+
+      .btn:hover::before {
+        transform: translateX(0);
+      }
+      .btn:hover {
+        box-shadow: 0 8px 30px rgba(201, 169, 110, 0.3);
+      }
+      .btn:active {
+        transform: scale(0.99);
+      }
+
+      .btn svg {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+      }
+
+      .note {
+        text-align: center;
+        font-size: 0.7rem;
+        color: var(--mid);
+        margin-top: 1rem;
+        letter-spacing: 0.05em;
+        line-height: 1.6;
+      }
+
+      .note a {
+        color: var(--gold);
+        text-decoration: none;
+      }
+
+      .success {
+        display: none;
+        text-align: center;
+        padding: 3rem 2rem;
+        animation: fadeUp 0.5s ease both;
+      }
+
+      .success-icon {
+        width: 60px;
+        height: 60px;
+        border: 1px solid var(--gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+      }
+
+      .success h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: var(--cream);
+        margin-bottom: 0.5rem;
+      }
+
+      .success p {
+        color: var(--mid);
+        font-size: 0.85rem;
+        line-height: 1.7;
+      }
+
+      @keyframes fadeDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .card {
+          padding: 1.75rem 1.25rem;
+        }
+        .row {
+          grid-template-columns: 1fr;
+        }
+        .tipos-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .logo {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo"><img src="../img/Logo.webp" style="width: 200px; height: 200px;" alt=""></div>
+        <div class="tagline">Interior Design</div>
+        <div class="divider"></div>
+        <div class="title">Solicitar Orçamento</div>
+      </div>
+
+      <div class="card">
+        <div id="form-area">
+          <div class="section">
+            <div class="section-label">Dados de Contacto</div>
+            <div class="row">
+              <div class="field">
+                <label>Nome *</label>
+                <input
+                  type="text"
+                  id="nome"
+                  placeholder="O seu nome"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label>Telefone *</label>
+                <input
+                  type="tel"
+                  id="telefone"
+                  placeholder="+244 9XX XXX XXX"
+                  required
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input type="email" id="email" placeholder="email@exemplo.com" />
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-label">Detalhes do Projecto</div>
+
+            <div class="field">
+              <label>Tipo de Espaço *</label>
+              <select id="espaco">
+                <option value="" disabled selected>
+                  Seleccione o tipo de espaço
+                </option>
+                <option value="Apartamento">Apartamento</option>
+                <option value="Vivenda / Moradia">Vivenda / Moradia</option>
+                <option value="Escritório">Escritório</option>
+                <option value="Loja / Comércio">Loja / Comércio</option>
+                <option value="Restaurante / Café">Restaurante / Café</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Divisões a intervir</label>
+              <div class="tipos-grid">
+                <div class="tipo-item">
+                  <input type="checkbox" id="sala" value="Sala" /><label
+                    for="sala"
+                    >Sala</label
+                  >
+                </div>
+                <div class="tipo-item">
+                  <input type="checkbox" id="quarto" value="Quarto" /><label
+                    for="quarto"
+                    >Quarto</label
+                  >
+                </div>
+                <div class="tipo-item">
+                  <input type="checkbox" id="cozinha" value="Cozinha" /><label
+                    for="cozinha"
+                    >Cozinha</label
+                  >
+                </div>
+                <div class="tipo-item">
+                  <input
+                    type="checkbox"
+                    id="escritorio"
+                    value="Escritório"
+                  /><label for="escritorio">Escritório</label>
+                </div>
+                <div class="tipo-item">
+                  <input
+                    type="checkbox"
+                    id="casa-banho"
+                    value="Casa de banho"
+                  /><label for="casa-banho">Casa de banho</label>
+                </div>
+                <div class="tipo-item">
+                  <input type="checkbox" id="outro-div" value="Outro" /><label
+                    for="outro-div"
+                    >Outro</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label>Área aproximada (m²)</label>
+                <input type="number" id="area" placeholder="Ex: 80" min="1" />
+              </div>
+              <div class="field">
+                <label>Orçamento disponível</label>
+                <select id="orcamento">
+                  <option value="" disabled selected>Seleccione</option>
+                  <option value="Menos de 500.000 Kz">
+                    Menos de 500.000 Kz
+                  </option>
+                  <option value="500.000 – 1.000.000 Kz">
+                    500.000 – 1.000.000 Kz
+                  </option>
+                  <option value="1.000.000 – 3.000.000 Kz">
+                    1.000.000 – 3.000.000 Kz
+                  </option>
+                  <option value="Mais de 3.000.000 Kz">
+                    Mais de 3.000.000 Kz
+                  </option>
+                  <option value="A definir">A definir / Flexível</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Prazo desejado</label>
+              <select id="prazo">
+                <option value="" disabled selected>
+                  Quando precisa do projecto?
+                </option>
+                <option value="Urgente (menos de 1 mês)">
+                  Urgente (menos de 1 mês)
+                </option>
+                <option value="1 a 3 meses">1 a 3 meses</option>
+                <option value="3 a 6 meses">3 a 6 meses</option>
+                <option value="Mais de 6 meses">Mais de 6 meses</option>
+                <option value="Sem prazo definido">Sem prazo definido</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Descreva o seu projecto</label>
+              <textarea
+                id="descricao"
+                placeholder="Conte-nos mais sobre o seu espaço, estilo que prefere, referências, ou qualquer detalhe que considere importante..."
+              ></textarea>
+            </div>
+          </div>
+
+          <button class="btn" onclick="enviarWhatsApp()">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+              />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.526 5.845L.057 23.428a.75.75 0 00.918.918l5.638-1.47A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.693-.513-5.228-1.406l-.374-.222-3.878 1.011 1.01-3.773-.235-.386A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
+              />
+            </svg>
+            Enviar pedido via WhatsApp
+          </button>
+
+          <p class="note">
+            Ao clicar, abre o WhatsApp com o seu pedido já formatado.<br />
+            Respondemos em até
+            <strong style="color: var(--gold-light)">24 horas</strong>.
+          </p>
+        </div>
+
+        <div class="success" id="success-area">
+          <div class="success-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#C9A96E"
+              stroke-width="1.5"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <h3>Pedido enviado!</h3>
+          <p>
+            O seu orçamento foi enviado com sucesso.<br />A equipa CRIA+ entrará
+            em contacto brevemente.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Número WhatsApp da CRIA+
+      const WHATSAPP_NUMBER = "244936055943";
+
+      function enviarWhatsApp() {
+        const nome = document.getElementById("nome").value.trim();
+        const telefone = document.getElementById("telefone").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const espaco = document.getElementById("espaco").value;
+        const area = document.getElementById("area").value;
+        const orcamento = document.getElementById("orcamento").value;
+        const prazo = document.getElementById("prazo").value;
+        const descricao = document.getElementById("descricao").value.trim();
+
+        if (!nome) {
+          alert("Por favor, introduza o seu nome.");
+          return;
+        }
+        if (!telefone) {
+          alert("Por favor, introduza o seu telefone.");
+          return;
+        }
+        if (!espaco) {
+          alert("Por favor, seleccione o tipo de espaço.");
+          return;
+        }
+
+        const divisoes =
+          [...document.querySelectorAll(".tipo-item input:checked")]
+            .map((cb) => cb.value)
+            .join(", ") || "Não especificado";
+
+        let msg = `🏠 *PEDIDO DE ORÇAMENTO — CRIA+*\n\n`;
+        msg += `*👤 CONTACTO*\n`;
+        msg += `• Nome: ${nome}\n`;
+        msg += `• Telefone: ${telefone}\n`;
+        if (email) msg += `• Email: ${email}\n`;
+        msg += `\n*📐 PROJECTO*\n`;
+        msg += `• Tipo de espaço: ${espaco}\n`;
+        msg += `• Divisões: ${divisoes}\n`;
+        if (area) msg += `• Área: ${area} m²\n`;
+        if (orcamento) msg += `• Orçamento: ${orcamento}\n`;
+        if (prazo) msg += `• Prazo: ${prazo}\n`;
+        if (descricao) msg += `\n*📝 DESCRIÇÃO*\n${descricao}\n`;
+        msg += `\n_Enviado via formulário do site CRIA+_`;
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+        window.open(url, "_blank");
+
+        document.getElementById("form-area").style.display = "none";
+        document.getElementById("success-area").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
