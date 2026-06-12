@@ -14,7 +14,7 @@
       property="og:title"
       content="CRIA+ | Móveis Planejados de Alto Padrão em Angola"
     />
-   
+
     <meta property="og:site_name" content="CRIA+" />
     <meta
       property="og:description"
@@ -49,13 +49,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-
     <title>CRIA+ | Móveis Planejados de Alto Padrão em Angola</title>
 
     <!-- GOOGLE FONT -->
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=design_services,home&display=swap"/>
-    <link rel="shortcut icon" href="favicon/favicon.png" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=design_services,home&display=swap"
+    />
+    <link rel="shortcut icon" href="favicon/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="Styles/index.css" />
     <link rel="stylesheet" href="Styles/animationpage.css" />
     <link rel="stylesheet" href="Styles/darmode.css" />
@@ -361,7 +366,8 @@
                   width: 100%;
                   padding: 80px 60px;
                  background: #0d0d0d;
-
+                height: 100vh;
+                margin-bottom: 50px;
 
                   display: flex;
                   align-items: center;
@@ -580,6 +586,59 @@
                   margin-top: 10px;
                   font-family: Georgia, serif;
                }
+                .servicos-wrapper {
+                      padding: 40px 25px;
+                      background: #0d0d0d;
+                      height: 100vh;
+               }
+              .servicos-titulo {
+                    text-align: center;
+                    line-height: 37px;
+                    margin-bottom: 20px;
+                }
+              .servicos-titulo h3  {
+                    color: #d88916;
+                    font-size: 13px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+                .servicos-titulo h1  {
+                    font-size: 28px;
+                    color: #fff;
+                    font-weight: 700;
+                }
+                #serv {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                    border-top: 1px solid #d0c8c0;
+                    border-bottom: 1px solid #d0c8c0;
+                    margin-top: 10px;
+                    padding: 20px 0;
+                }
+                .serv-box {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 12px;
+                    border-right: 1px solid #d0c8c0;
+                    padding: 20px 15px;
+                }
+                .serv-box:last-child {
+                    border-right: none;
+                }
+                .serv-box svg {
+                    width: 42px;
+                    height: 42px;
+                    color: #d88916;
+                }
+                .serv-box h3 {
+                    text-align: center;
+                    font-size: 11px;
+                    font-weight: 700;
+                    letter-spacing: 1.5px;
+                    color: #fff;
+                }
 
                 /* ================= MOBILE ================= */
 
@@ -679,12 +738,12 @@
         <a href="#contato">Contato</a>
       </nav>
       <div class="darkmode">
-  <div class="trilho">
-    <span class="icone-modo">☀️</span>
-    <div class="indicador"></div>
-    <span class="icone-modo">🌙</span>
-  </div>
-</div>
+        <div class="trilho">
+          <span class="icone-modo">☀️</span>
+          <div class="indicador"></div>
+          <span class="icone-modo">🌙</span>
+        </div>
+      </div>
     </header>
 
     <!-- ================= HERO ================= -->
@@ -784,6 +843,120 @@
           </p>
         </div>
       </section>
+      <div class="servicos-wrapper">
+        <div class="servicos-titulo">
+          <h3>Serviços</h3>
+          <h1>Móveis planejados para <br />todos os ambientes.</h1>
+        </div>
+
+        <section id="serv">
+          <!-- os serv-box aqui -->
+          <!-- SALAS -->
+          <div class="serv-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            <h3>SALAS</h3>
+          </div>
+
+          <!-- QUARTOS -->
+          <div class="serv-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M2 9V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v5" />
+              <path d="M2 11a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8H2z" />
+              <path d="M2 19v2m20-2v2" />
+              <path d="M6 9V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+            </svg>
+            <h3>QUARTOS</h3>
+          </div>
+
+          <!-- COZINHAS -->
+          <div class="serv-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 3h18v5H3z" />
+              <path d="M3 8v13h18V8" />
+              <path d="M9 8v13" />
+              <path d="M6 11h3m0 3H6m0 3h3" />
+            </svg>
+            <h3>COZINHAS</h3>
+          </div>
+
+          <!-- HOME THEATER -->
+          <div class="serv-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="4" width="20" height="14" rx="2" />
+              <path d="M8 20h8m-4-2v2" />
+              <circle cx="12" cy="11" r="3" />
+            </svg>
+            <h3>HOME THEATER</h3>
+          </div>
+
+          <!-- ESCRITÓRIOS -->
+          <div class="serv-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="13" width="20" height="8" rx="1" />
+              <path d="M2 13V7a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v6" />
+              <path d="M6 21v-4m12 4v-4" />
+              <path d="M6 9h4m-4 2h4" />
+            </svg>
+            <h3>ESCRITÓRIOS</h3>
+          </div>
+
+          <!-- ÁREAS DE SERVIÇO -->
+          <div class="serv-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 6h18M3 12h18M3 18h18" />
+              <rect x="5" y="3" width="4" height="6" rx="1" />
+              <rect x="15" y="9" width="4" height="6" rx="1" />
+              <rect x="9" y="15" width="4" height="6" rx="1" />
+            </svg>
+            <h3>ÁREAS DE SERVIÇO</h3>
+          </div>
+        </section>
+      </div>
       <section id="inicio-depoimentos">
         <article id="inicio-texto">
           <div>
@@ -796,24 +969,29 @@
             Transformamos ideias em ambientes que <br />superam expectativas e
             criam memórias.
           </p>
-          
         </article>
 
         <article id="inicio-img">
-          <img src="img/cozinha-planejada-ilha-madeira-luanda.webp" alt="Cozinha planejada CRIA+ Luanda" />
+          <img
+            src="img/cozinha-planejada-ilha-madeira-luanda.webp"
+            alt="Cozinha planejada CRIA+ Luanda"
+          />
         </article>
       </section>
 
       <section id="depoimentos">
         <article class="cards">
-          <img src="img/cozinha-planejada-ilha-madeira-luanda.webp" alt="Cozinha planejada CRIA+ Luanda" />
+          <img
+            src="img/cozinha-planejada-ilha-madeira-luanda.webp"
+            alt="Cozinha planejada CRIA+ Luanda"
+          />
 
           <div class="texto-card">
             <div class="pessoa">
               <img src="img/images.webp" alt="Cliente satisfeito CRIA+" />
 
               <strong>Ana Luisa</strong>
-              <span style="color: #d88916;">★★★★★</span>
+              <span style="color: #d88916">★★★★★</span>
             </div>
 
             <p>
@@ -827,14 +1005,17 @@
         </article>
 
         <article class="cards">
-          <img src="img/cozinha-planejada-ilha-madeira-luanda.webp" alt="Cozinha planejada CRIA+ Luanda" />
+          <img
+            src="img/cozinha-planejada-ilha-madeira-luanda.webp"
+            alt="Cozinha planejada CRIA+ Luanda"
+          />
 
           <div class="texto-card">
             <div class="pessoa">
               <img src="img/images.webp" alt="Cliente satisfeito CRIA+" />
 
               <strong>Ana Luisa</strong>
-              <span style="color: #d88916;">★★★★★</span>
+              <span style="color: #d88916">★★★★★</span>
             </div>
 
             <p>
@@ -848,20 +1029,23 @@
         </article>
 
         <article class="cards">
-          <img src="img/cozinha-planejada-ilha-madeira-luanda.webp" alt="Cozinha planejada CRIA+ Luanda" />
+          <img
+            src="img/cozinha-planejada-ilha-madeira-luanda.webp"
+            alt="Cozinha planejada CRIA+ Luanda"
+          />
 
           <div class="texto-card">
             <div class="pessoa">
               <img src="img/images.webp" alt="Cliente satisfeito CRIA+" />
 
               <strong>Ana Luisa</strong>
-             <span style="color: #d88916;">★★★★★</span>
+              <span style="color: #d88916">★★★★★</span>
             </div>
 
             <p>
               <q>
                 Superaram todas as minhas <br />expectativas. Cada detalhe do
-                <br />meu apartamento ficou perfeito!</q 
+                <br />meu apartamento ficou perfeito!</q
               >
               <span class="aspas">"</span>
             </p>
@@ -869,14 +1053,17 @@
         </article>
 
         <article class="cards">
-          <img src="img/cozinha-planejada-ilha-madeira-luanda.webp" alt="Cozinha planejada CRIA+ Luanda" />
+          <img
+            src="img/cozinha-planejada-ilha-madeira-luanda.webp"
+            alt="Cozinha planejada CRIA+ Luanda"
+          />
 
           <div class="texto-card">
             <div class="pessoa">
               <img src="img/images.webp" alt="Cliente satisfeito CRIA+" />
 
               <strong>Ana Luisa</strong>
-             <span style="color: #d88916;">★★★★★</span>
+              <span style="color: #d88916">★★★★★</span>
             </div>
 
             <p>
@@ -1050,8 +1237,8 @@
       </button>
     </div>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"  ></script>
-    <script >
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
       new Typed(".txt-animado-inicio strong", {
         strings: [
           "transforma.",

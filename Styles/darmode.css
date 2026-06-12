@@ -253,3 +253,34 @@ body.dark .texto-card p {
 body.dark #depoimentos {
     background: #f5f5f0;
 }
+
+
+/* SERVIÇOS — MODO CLARO */
+body.dark .servicos-wrapper {
+    background: #EEE8E4;
+}
+
+body.dark .servicos-titulo h1 {
+    color: #1a1a1a;
+}
+
+body.dark .servicos-titulo h3 {
+    color: #d88916;
+}
+
+body.dark #serv {
+    border-top: 1px solid #d0c8c0;
+    border-bottom: 1px solid #d0c8c0;
+}
+
+body.dark .serv-box {
+    border-right: 1px solid #d0c8c0;
+}
+
+body.dark .serv-box svg {
+    color: #d88916;
+}
+
+body.dark .serv-box h3 {
+    color: #333333;
+}
