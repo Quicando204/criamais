@@ -181,6 +181,6 @@ ScrollReveal().reveal("#inicio-img", {
 
 ScrollReveal().reveal(".servicos-wrapper", {
   duration:2000,
-  origin:"top",
+  origin:"bottom",
   distance:"90px"
 })

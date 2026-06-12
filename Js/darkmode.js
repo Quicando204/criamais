@@ -1,26 +1,17 @@
-let trilho = document.querySelector('.trilho')
-let body = document.querySelector('body')
-imagemModo = document.querySelector('.imagem-modo')
+const btn = document.getElementById('btn-tema')
+const body = document.querySelector('body')
+const imagemModo = document.querySelector('.imagem-modo')
 
+// Carrega preferência guardada
 if (localStorage.getItem('darkmode') === 'true') {
   body.classList.add('dark')
-  trilho.classList.add('dark')
-
-  if (imagemModo) {
-    imagemModo.src = '../img/escritorio-preto.webp'
-  }
+  if (imagemModo) imagemModo.src = '../img/escritorio-preto.webp'
 }
 
-trilho.addEventListener('click', () => {
-  trilho.classList.toggle('dark')
+btn.addEventListener('click', () => {
   body.classList.toggle('dark')
-
   const modoActivo = body.classList.contains('dark')
-
-  // Guardar preferência
   localStorage.setItem('darkmode', modoActivo)
-
-  // Só mudar imagem se existir nesta página
   if (imagemModo) {
     imagemModo.src = modoActivo ? '../img/escritorio-preto.webp' : '../img/escritorio.webp'
   }
