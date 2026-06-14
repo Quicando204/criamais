@@ -316,6 +316,16 @@
         object-fit: contain;
         display: block;
       }
+      #burguer {
+        display: none;
+        cursor: pointer;
+        color: #f09a19;
+      }
+
+      #burguer .material-symbols-outlined {
+        font-size: 35px;
+        color: #f09a19;
+      }
 
       @media (max-width: 992px) {
         .secao-sobre,
@@ -325,21 +335,36 @@
         }
       }
       @media (max-width: 768px) {
-        #botao-menu {
-          display: block;
+        header {
+          padding: 0px 25px;
         }
-        #menu {
-          display: none;
+
+        nav {
           position: absolute;
-          left: 0;
-          top: 100%;
-          width: 100%;
-          background: #000;
-          flex-direction: column;
-          padding: 20px;
-        }
-        #menu.ativo {
+          top: 85px;
+          right: 0px;
+          width: 230px;
+          background: #171717;
+          padding: 25px;
+          border-radius: 12px;
           display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-10px);
+          transition: 0.3s;
+        }
+
+        nav.show {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+
+        #burguer {
+          display: block;
         }
         .estatisticas {
           grid-template-columns: 1fr;
@@ -363,7 +388,9 @@
             ><img src="../img/Logo.webp" alt="Logo CRIA+" class="hero-image"
           /></a>
         </div>
-        
+        <div id="burguer">
+          <span class="material-symbols-outlined" id="icon"> menu </span>
+        </div>
         <nav id="menu">
           <a href="../index.html">Início</a>
           <a href="sobre.html" class="ativo">Sobre Nós</a>
