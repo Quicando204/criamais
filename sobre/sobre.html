@@ -116,12 +116,17 @@
         top: 0;
         z-index: 999;
         background: #111111;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        padding: 0px 70px;
       }
       .cabecalho {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 0;
+        width: 100%;
+        height: 100%;
       }
 
       #menu {
@@ -306,8 +311,9 @@
         margin-top: 25px;
       }
       .logo img {
-        width: clamp(120px, 20vw, 260px);
-        height: auto;
+        height: 180px;
+        width: auto;
+        object-fit: contain;
         display: block;
       }
 
@@ -357,11 +363,11 @@
             ><img src="../img/Logo.webp" alt="Logo CRIA+" class="hero-image"
           /></a>
         </div>
-
+        
         <nav id="menu">
           <a href="../index.html">Início</a>
           <a href="sobre.html" class="ativo">Sobre Nós</a>
-          <a href="#serviço">Serviço</a>
+          <a href="#serviço">Serviços</a>
           <a href="../projeto/projeto.html">Projetos</a>
           <a href="#contacto">Contacto</a>
         </nav>
