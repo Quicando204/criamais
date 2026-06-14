@@ -411,6 +411,55 @@
         }
       }
 
+      .loader {
+  position: fixed;
+  inset: 0;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 0.5s ease;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.loader img {
+  width: 250px;
+  animation: pulsar 1s ease-in-out infinite alternate;
+}
+
+.loader-barra-fundo {
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loader-barra {
+  height: 100%;
+  width: 0%;
+  background: #d88916;
+  border-radius: 10px;
+  animation: carregar 2s ease forwards;
+}
+
+@keyframes carregar {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+.loader.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
       @media (max-width: 480px) {
         .card {
           padding: 1.75rem 1.25rem;
@@ -619,7 +668,14 @@
         </div>
       </div>
     </div>
-
+    <div class="loader">
+  <div class="loader-content">
+    <img src="../img/Logo.webp" alt="CRIA+" />
+    <div class="loader-barra-fundo">
+      <div class="loader-barra"></div>
+    </div>
+  </div>
+</div>
     <script>
       // Número WhatsApp da CRIA+
       const WHATSAPP_NUMBER = "244936055943";
@@ -712,7 +768,8 @@
     }
 
   }
-
+ 
   </script>
+   <script src="Js/formulario.js" defer></script>
   </body>
 </html>
