@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
 
 
   // Número WhatsApp da CRIA+
-      const WHATSAPP_NUMBER = "244936055943";
+      const WHATSAPP_NUMBER = "244956112235";
 
       function enviarWhatsApp() {
         const nome = document.getElementById("nome").value.trim();
