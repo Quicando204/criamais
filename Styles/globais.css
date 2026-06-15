@@ -1,5 +1,9 @@
-
-                /* WhatsApp Widget CRIA+ */
+  *, *::before, *::after {
+  box-sizing: border-box;
+}                        
+                          
+                          
+                          /* WhatsApp Widget CRIA+ */
 
 #wa-bubble-typing {
   background: #fff;
@@ -53,7 +57,136 @@
   color: #aaa;
   margin-top: 2px;
 }
- 
-        
-        /*FOOOTER*/
 
+                            /*FOOOTER*/
+
+footer {
+  margin-top: 20px;
+  background: #111111;
+  color: #cccccc;
+  font-size: 2rem;
+  padding: 48px 40px 0;
+  box-sizing: border-box; 
+  width: 100%;            
+  overflow: hidden;       
+}
+
+/* --- Grid principal --- */
+#cards {
+  display: grid;
+ grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+  gap: 32px;
+  padding-bottom: 40px;
+   align-items: start;
+  border-bottom: 1px solid #2a2a2a;
+  min-width: 0;
+}
+
+/* --- Coluna da marca --- */
+#footer-inicio {
+  align-self: start;
+}
+#footer-inicio h1 {
+  font-size: 22px;
+  font-weight: 700;
+  font-style: italic;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+#footer-inicio h1 span {
+  color: #d88916;
+}
+
+#footer-inicio p {
+  font-size: 13px;
+  color: #999999;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+.social-icons a {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaaaaa;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 0;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+.social-icons a:hover {
+  border-color: #d88916;
+  color: #d88916;
+}
+
+/* --- Colunas de links --- */
+#cards > section h2 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+#cards > section a {
+  display: block;
+  font-size: 13.5px;
+  color: #999999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+#cards > section a:hover {
+  color: #d88916;
+}
+
+/* --- Contactos com ícone --- */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.contact-item i {
+  color: #d88916;
+  font-size: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* --- Barra final --- */
+#footer-final {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 0;
+  font-size: 12.5px;
+  color: #555555;
+}
+#footer-final a {
+  color: #555555;
+  text-decoration: none;
+}
+#footer-final a:hover {
+  color: #d88916;
+}
+#footer-final .links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+#footer-final .sep {
+  color: #333333;
+}
