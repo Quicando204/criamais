@@ -1,42 +1,33 @@
-@media(prefers-reduced-motion: no-preference) {
-@view-transition{
-    navigation: auto;
-}
-
-::view-transition-group(page-content){
-    animation-duration: 1s;
-    animation-timing-function: ease;
-
-}
-::view-transition-old(page-content){
-    animation-name: slides-out;
-
-}
-
-::view-transition-new(page-content){
-    animation-name: slides-in;
-
-}
 
 main {
-    view-transition-name: page-content;
+    view-transition-name: conteudo-pagina;
 }
 
-.card img , .hero-image {
-    view-transition-name: article-image;
+@view-transition {
+    navigation:auto
 }
 
-
-@keyframes slides-out {
+@keyframes saindo {
     to {
-        translate: -100vw;
+        transform: translateY(100%);
     }
 }
 
-@keyframes slides-in {
+@keyframes entrando{
     from {
-        translate: 100vw;
+        transform: translateY(100%);
     }
 }
+
+::view-transition-group(conteudo-pagina){
+animation-duration: 3s;
+}
+
+::view-transition-old(conteudo-pagina){
+animation-name: saindo;
+}
+
+::view-transition-new(conteudo-pagina){
+    animation-name: entrando;
 }
 
