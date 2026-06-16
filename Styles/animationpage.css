@@ -20,7 +20,7 @@ main {
 }
 
 ::view-transition-group(conteudo-pagina){
-animation-duration: 3s;
+animation-duration: 2.5s;
 }
 
 ::view-transition-old(conteudo-pagina){
