@@ -184,3 +184,10 @@ ScrollReveal().reveal(".servicos-wrapper", {
   origin:"bottom",
   distance:"90px"
 })
+
+ScrollReveal().reveal(".footer", {
+  duration:2000,
+  origin:"bottom",
+  distance:"90px",
+  delay:50
+})
