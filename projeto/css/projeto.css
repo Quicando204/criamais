@@ -7,9 +7,8 @@
   font-family: "Poppins", sans-serif;
 }
 html {
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-
 
 /* HEADER */
 header {
@@ -87,7 +86,7 @@ header .logo img {
 body {
   min-height: 100vh;
   background: #0a0a0a;
-    
+  overflow-y: hidden;
 }
 
 h1,
@@ -101,7 +100,6 @@ h3 {
   color: #d88916;
   text-align: center;
   margin-top: 100px;
-  
 }
 
 h1 span {
@@ -290,8 +288,7 @@ h1 span {
 
 /* Banner CTA */
 .cta-banner {
-
-   background-color: #716f6f;
+  background-color: #716f6f;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -325,7 +322,6 @@ h1 span {
 }
 
 .cta-btn {
-  
   background-color: #d88916;
   border-radius: 5px;
   color: #ffffff;
@@ -344,7 +340,6 @@ h1 span {
 }
 .filterable_cards {
   overflow-y: hidden;
-  
 }
 
 /* Responsivo */
@@ -360,7 +355,6 @@ h1 span {
     text-align: center;
   }
 }
-
 
 /* MOBILE */
 @media (max-width: 1024px) {
@@ -409,11 +403,12 @@ h1 span {
   .filterable_cards {
     grid-template-columns: 1fr;
   }
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
   }
-
 }
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
