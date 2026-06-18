@@ -286,8 +286,10 @@ body.dark .paragrafos p{
  
 }
 
-body.dark #menu a {
+@media (max-width: 780px ) {
+  body.dark #menu a {
   color: #fff;
+}
 }
 
 
