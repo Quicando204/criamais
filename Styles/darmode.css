@@ -290,7 +290,7 @@ body.dark .main {
   background-color: #fff;
 }
 
-body.dark #d-texto h1, body.dark #titulo h1 {
+body.dark #d-texto h1, body.dark #titulo h1,body.dark #diferenciais h1 {
   color: #000;
 }
 
