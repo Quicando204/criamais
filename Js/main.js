@@ -191,3 +191,24 @@ ScrollReveal().reveal(".footer", {
   distance:"90px",
   delay:50
 })
+
+ScrollReveal().reveal(".box", {
+  duration:2000,
+  origin:Mobile ? "left":"bottom",
+  distance:"90px",
+  delay:50, 
+  interval:900
+})
+
+ScrollReveal().reveal ("#d-img", {
+  duration:2000,
+  origin: Mobile ? "bottom" : "right",
+  distance: "90px",
+  delay:50
+})
+
+ScrollReveal().reveal("#funciona", {
+  duration:2000,
+  origin:"top",
+  distance:"90px"
+})
