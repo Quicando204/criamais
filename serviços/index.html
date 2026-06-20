@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="pt-AO">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- SEO BÁSICO -->
     <title>Serviços de Móveis Planejados em Luanda | CRIA+</title>
     <meta
@@ -14,10 +17,10 @@
     <meta name="author" content="CRIA+" />
     <meta name="robots" content="index, follow" />
 
-    <!-- CANONICAL -->
-    <link rel="canonical" href="https://criamais.ao/servicos/index.html" />
+    <!-- CANONICAL — corrigido: sem index.html -->
+    <link rel="canonical" href="https://criamais.ao/servicos/" />
 
-    <!-- OPEN GRAPH -->
+    <!-- OPEN GRAPH — corrigido: og:url sem index.html -->
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
@@ -27,7 +30,10 @@
       property="og:description"
       content="Do atendimento à instalação: projectos exclusivos de interiores para salas, quartos, cozinhas e mais. CRIA+ — Luanda, Angola."
     />
-    <meta property="og:url" content="https://criamais.ao/servicos/index.html" />
+    <meta
+      property="og:url"
+      content="https://criamais.ao/servicos/"
+    />
     <meta
       property="og:image"
       content="https://criamais.ao/img/og-servicos.webp"
@@ -49,8 +55,15 @@
       name="twitter:image"
       content="https://criamais.ao/img/og-servicos.webp"
     />
+
+    <!-- PRECONNECT — melhoria de performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap"
@@ -62,7 +75,7 @@
     <link rel="stylesheet" href="../Styles/animationpage.css" />
     <link rel="stylesheet" href="../Styles/globais.css" />
     <link rel="stylesheet" href="../Styles/darmode.css" />
-
+    
     <link
       rel="shortcut icon"
       href="../favicon/favicon.png"
@@ -781,7 +794,7 @@
   <body>
     <header>
       <div class="logo">
-        <a href="servicos.html"
+        <a href="index.html"
           ><img
             src="../img/Logo.webp "
             alt="CRIA+ Móveis Planejados em Luanda"
@@ -1055,6 +1068,7 @@
         <img
           src="../img/projeto-moveis-planejados-interiores-luanda.webp"
           alt="Projecto de móveis planejados desenhado à mão em Luanda"
+          loading="lazy"
         />
       </article>
     </section>
@@ -1226,10 +1240,12 @@
     <footer class="footer">
       <div id="cards">
         <section id="footer-inicio">
+          <!-- corrigido: alt descritivo -->
           <img
             src="../img/Logo.webp"
             alt="CRIA+ Móveis Planejados Luanda"
             style="height: 90px; margin-bottom: 14px"
+            loading="lazy"
           />
           <p>
             Design e móveis planejados que transformam<br />
@@ -1337,7 +1353,8 @@
               border-radius: 50%;
               object-fit: cover;
             "
-            alt="CRIA+ Móveis Planejados Luanda"
+            alt="CRIA+"
+            loading="lazy"
           />
           <div>
             <p
@@ -1455,6 +1472,8 @@
           "image": "https://criamais.ao/img/og-servicos.webp",
           "telephone": "+244956112235",
           "email": "criamais@gmail.com",
+          "priceRange": "Kz Kz Kz",
+          "openingHours": "Mo-Fr 08:00-18:00",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Pumangol — Madeira, Rua 1",
@@ -1475,13 +1494,13 @@
               "@type": "ListItem",
               "position": 1,
               "name": "Início",
-              "item": "https://criamais.ao/index.html"
+              "item": "https://criamais.ao/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Serviços",
-              "item": "https://criamais.ao/servicos/servicos.html"
+              "item": "https://criamais.ao/servicos/"
             }
           ]
         },
