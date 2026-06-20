@@ -286,6 +286,26 @@ body.dark .paragrafos p{
  
 }
 
+body.dark .main {
+  background-color: #fff;
+}
+
+body.dark #d-texto h1 {
+  color: #000;
+}
+
+body.dark #funciona {
+  background-color: #111;
+ 
+}
+body.dark #funciona h1 , body.dark #funciona p, body.dark .box h2,  body.dark .box p  {
+  color: #fff;
+} 
+ body.dark #funciona strong{
+  color: #d88916;
+ }
+
+
 @media (max-width: 780px ) {
   body.dark #menu a {
   color: #fff;
