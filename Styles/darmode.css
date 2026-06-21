@@ -301,8 +301,12 @@ body.dark #funciona {
 body.dark #funciona h1 , body.dark #funciona p, body.dark .box h2,  body.dark .box p  {
   color: #fff;
 } 
- body.dark #funciona strong{
+ body.dark #funciona strong, body.dark .cr-eyebrow{
   color: #d88916;
+ }
+
+ body.dark .cr-wrap {
+  background-color: #eee8e4;
  }
 
 

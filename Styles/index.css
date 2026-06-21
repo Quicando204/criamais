@@ -4,6 +4,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+     font-family: "Poppins", sans-serif;
   }
 
   html,
@@ -17,7 +18,7 @@
   }
 
   body {
-      font-family: "Poppins", sans-serif;
+      
       background: #000;
       background-color 0.5s,
       color 0.5s;
@@ -609,6 +610,175 @@
       font-weight: 700;
       letter-spacing: 1.5px;
       color: #fff;
+  }
+   .cr-wrap {
+    height: 100vh;
+    padding: 64px 0 48px;
+    background: #0e0e0e;
+    overflow: hidden;
+  }
+
+  /* ── Cabeçalho ── */
+  .cr-head {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 16px;
+  }
+  .cr-eyebrow {
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #d88916;
+    margin-bottom: 8px;
+  }
+  .cr-title {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 300;
+    color: #f0ece5;
+    letter-spacing: .03em;
+    margin: 0;
+  }
+  .cr-title b {
+    font-weight: 700;
+    color: #d88916;
+  }
+
+  /* ── Fade lateral ── */
+  .cr-outer {
+    position: relative;
+    overflow: hidden;
+  }
+  .cr-outer::before,
+  .cr-outer::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 100px;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .cr-outer::before {
+    left: 0;
+    background: linear-gradient(to right, #0e0e0e, transparent);
+  }
+  .cr-outer::after {
+    right: 0;
+    background: linear-gradient(to left, #0e0e0e, transparent);
+  }
+
+  /* ── Trilho animado ── */
+  .cr-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    padding: 8px 0 16px;
+    animation: criamove 30s linear infinite;
+  }
+  .cr-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes criamove {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cr-track { animation: none; }
+  }
+
+  /* ── Card individual ── */
+  .cr-card {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 260px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(184, 156, 110, 0.30);
+    overflow: hidden;
+    position: relative;
+    background: #1a1710;
+    cursor: pointer;
+    transition: border-color .3s ease, transform .3s ease;
+  }
+  .cr-card:hover {
+    border-color: #d88916;
+    transform: translateY(-5px);
+  }
+
+  .cr-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(.82) saturate(.85);
+    transition: transform .5s ease, filter .5s ease;
+  }
+  .cr-card:hover img {
+    transform: scale(1.07);
+    filter: brightness(1) saturate(1.05);
+  }
+
+  /* ── Badge de categoria ── */
+  .cr-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(10, 8, 5, .75);
+    border: 1px solid rgba(184, 156, 110, .55);
+    color: #d88916;
+    font-size: 10px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+  }
+
+  /* ── Info ao hover ── */
+  .cr-info {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(10, 8, 5, .92) 0%, transparent 100%);
+    padding: 32px 14px 14px;
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+  .cr-card:hover .cr-info {
+    opacity: 1;
+  }
+  .cr-info-name {
+    color: #f0ece5;
+    font-size: .85rem;
+    font-weight: 600;
+    border-left: 2px solid #d88916;
+    padding-left: 8px;
+    line-height: 1.3;
+  }
+  .cr-info-sub {
+    color: #d88916;
+    font-size: .73rem;
+    padding-left: 10px;
+    margin-top: 3px;
+  }
+
+  /* ── Indicadores ── */
+  .cr-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 20px;
+  }
+  .cr-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #2e2a1e;
+    transition: all .3s;
+  }
+  .cr-dot.active {
+    background: #d88916;
+    width: 18px;
+    border-radius: 3px;
   }
 
   /* ================= MOBILE ================= */
