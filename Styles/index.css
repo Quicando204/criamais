@@ -670,7 +670,8 @@
   .cr-track {
     display: flex;
     gap: 16px;
-    width: max-content;
+   /* width: max-content;*/
+     will-change: transform;
     padding: 8px 0 16px;
     animation: criamove 30s linear infinite;
   }
@@ -680,7 +681,7 @@
 
   @keyframes criamove {
     from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    to   { transform: translateX(-1296px); }
   }
 
   @media (prefers-reduced-motion: reduce) {
