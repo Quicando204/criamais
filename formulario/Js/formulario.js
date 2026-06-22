@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       loader.style.display = "none";
     }, 500);
-  }, 3000); // duração igual à animação da barra
+  }, 2000); // duração igual à animação da barra
 });
 
 // Número WhatsApp da CRIA+
