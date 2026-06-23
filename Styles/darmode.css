@@ -308,6 +308,21 @@ body.dark #funciona h1 , body.dark #funciona p, body.dark .box h2,  body.dark .b
  body.dark .cr-wrap {
   background-color: #eee8e4;
  }
+ body.dark #outras-formas, body.dark #formularios {
+  background: #ffffffa9;
+ 
+ }
+ body.dark #outras-formas strong, body.dark #outras-formas p {
+  color: #000;
+ 
+ }
+  body.dark #formas .box, body.dark input,
+body.dark textarea {
+  
+   background: rgba(255, 255, 255, 0.386);
+  border: 1px solid rgba(44, 42, 42, 0.196);
+ 
+ }
 
 
 @media (max-width: 780px ) {
