@@ -281,58 +281,58 @@ body.dark .serv-box h3 {
   color: #333333;
 }
 
-body.dark .paragrafos p{
+body.dark .paragrafos p {
   color: #fff;
- 
 }
 
 body.dark .main {
   background-color: #fff;
 }
 
-body.dark #d-texto h1, body.dark #titulo h1,body.dark #diferenciais h1 {
+body.dark #d-texto h1,
+body.dark #titulo h1,
+body.dark #diferenciais h1 {
   color: #000;
 }
 
 body.dark #funciona {
   background-color: #111111f2;
- 
 }
-body.dark #funciona h1 , body.dark #funciona p, body.dark .box h2,  body.dark .box p  {
+body.dark #funciona h1,
+body.dark #funciona p,
+body.dark .box h2,
+body.dark .box p {
   color: #fff;
-} 
- body.dark #funciona strong, body.dark .cr-eyebrow{
+}
+body.dark #funciona strong,
+body.dark .cr-eyebrow {
   color: #d88916;
- }
+}
 
- body.dark .cr-wrap {
+body.dark .cr-wrap {
   background-color: #eee8e4;
- }
- body.dark #outras-formas, body.dark #formularios {
+}
+body.dark #outras-formas,
+body.dark #formularios {
   background: #ffffffa9;
- 
- }
- body.dark #outras-formas strong, body.dark #outras-formas p {
+}
+body.dark #outras-formas strong,
+body.dark #outras-formas p {
   color: #000;
- 
- }
-  body.dark #formas .box, body.dark input,
+}
+body.dark #formas .box,
+body.dark input,
 body.dark textarea {
-  
-   background: rgba(255, 255, 255, 0.386);
+  background: rgba(255, 255, 255, 0.386);
   border: 1px solid rgba(44, 42, 42, 0.196);
- 
- }
+}
 
- body.dark #menu .active {
+body.dark #menu .active {
   color: #d88916;
- }
+}
 
-
-@media (max-width: 780px ) {
+@media (max-width: 780px) {
   body.dark #menu a {
-  color: #fff;
+    color: #fff;
+  }
 }
-}
-
-
