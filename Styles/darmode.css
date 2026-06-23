@@ -324,6 +324,10 @@ body.dark textarea {
  
  }
 
+ body.dark #menu .active {
+  color: #d88916;
+ }
+
 
 @media (max-width: 780px ) {
   body.dark #menu a {
