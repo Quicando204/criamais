@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/contacto.css" />
+  </head>
+
+  <body>
+    <main>
+      <section id="contactos">
+        <!-- FORMULÁRIO -->
+        <div id="formularios">
+          <h2>Envie a sua mensagem</h2>
+          <form action="" method="post">
+            <div>
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                placeholder="Nome completo"
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email (Opcional)"
+              />
+            </div>
+            <input
+              type="text"
+              name="telefone"
+              id="telefone"
+              placeholder="Telefone / Whatsapp"
+            />
+            <textarea name="msg" id="msg" placeholder="Mensagem"></textarea>
+            <span
+              id="form-erro"
+              style="color: #e55; font-size: 13px; display: none"
+            >
+              Por favor preenche todos os campos obrigatórios.
+            </span>
+
+            <button type="button" id="btn-enviar">Enviar Mensagem →</button>
+            <p>
+              Seus dados estão protegidos. Não compartilhamos suas informações.
+            </p>
+          </form>
+        </div>
+
+        <!-- OUTRAS FORMAS -->
+        <div id="outras-formas">
+          <h2>Outras Formas de contacto</h2>
+
+          <div id="formas">
+            <div class="box">
+              <span class="material-icons">phone</span>
+              <div class="box-content">
+                <strong>Telefone / Whatsapp</strong>
+                <p>(+244) 923 45 6650</p>
+              </div>
+            </div>
+
+            <div class="box">
+              <span class="material-icons">email</span>
+              <div class="box-content">
+                <strong>E-mail</strong>
+                <p>Contacto@criamais.com</p>
+              </div>
+            </div>
+
+            <div class="box">
+              <span class="material-icons">schedule</span>
+              <div class="box-content">
+                <strong>Horário de atendimento</strong>
+                <p>Segunda à sexta: 9h às 18h<br />Sábado: 9h às 13h</p>
+              </div>
+            </div>
+
+            <div class="box">
+              <span class="material-icons">share</span>
+              <div class="box-content">
+                <strong>Siga-nos</strong>
+                <div class="social-row">
+                  <a href="#" class="social-btn"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="social-btn"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a href="#" class="social-btn"
+                    ><i class="fa-brands fa-tiktok"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="mapa">
+        <a
+          href="https://maps.google.com/?q=38R9+G3J,Viana,Luanda"
+          target="_blank"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.732966494006!2d13.315070524691453!3d-8.908283960201963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f794fe0fab1f%3A0xe76d231fd964d21a!2sCRIA%20MAIS!5e1!3m2!1sen!2sao!4v1782215029094!5m2!1sen!2sao"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          >
+          </iframe>
+        </a>
+      </div>
+    </main>
+  </body>
+
+  <script src="Js/contacto.js" defer></script>
+</html>
