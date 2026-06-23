@@ -325,6 +325,7 @@ body.dark input,
 body.dark textarea {
   background: rgba(255, 255, 255, 0.386);
   border: 1px solid rgba(44, 42, 42, 0.196);
+  color: #111;
 }
 
 body.dark #menu .active {
