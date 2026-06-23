@@ -12,14 +12,81 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+      <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="css/contacto.css" />
+    <link rel="stylesheet" href="../Styles/globais.css">
+    <link rel="stylesheet" href="../Styles/animationpage.css">
+    <link rel="stylesheet" href="../Styles/darmode.css">
+   
   </head>
 
   <body>
+     <header>
+      <div class="container cabecalho">
+        <div class="logo">
+          <a href="../index.html"
+            ><img src="../img/Logo.webp" alt="CRIA+ Móveis Planejados Luanda" class="hero-image"
+          /></a>
+        </div>
+        <div id="burguer">
+          <span class="material-symbols-outlined" id="icon"> menu </span>
+        </div>
+        <nav id="menu">
+          <a href="../index.html">Início</a>
+          <a href="../sobre/sobre.html" class="active" style="color: #d88916;">Sobre Nós</a>
+          <a href="../servicos/index.html">Serviços</a>
+          <a href="../projeto/projeto.html">Projetos</a>
+          <a href="index.html">Contacto</a>
+        </nav>
+
+        <div class="darkmode">
+          <button class="btn-tema" id="btn-tema" aria-label="Alternar tema">
+            <!-- Lua — modo escuro padrão -->
+            <svg
+              class="icone-lua"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <!-- Sol — modo claro -->
+            <svg
+              class="icone-sol"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <line x1="12" y1="2" x2="12" y2="4" />
+              <line x1="12" y1="20" x2="12" y2="22" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="2" y1="12" x2="4" y2="12" />
+              <line x1="20" y1="12" x2="22" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+          </button>
+        </div>
+        <button id="botao-menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
     <main>
       <section id="contactos">
         <!-- FORMULÁRIO -->
@@ -95,13 +162,13 @@
               <div class="box-content">
                 <strong>Siga-nos</strong>
                 <div class="social-row">
-                  <a href="#" class="social-btn"
+                  <a href="https://www.facebook.com/profile.php?id=61551887450486&ref=NONE_xav_ig_profile_page_web" target="_blank" class="social-btn"
                     ><i class="fa-brands fa-facebook-f"></i
                   ></a>
-                  <a href="#" class="social-btn"
+                  <a href="https://www.instagram.com/cria__mais/" target="_blank" class="social-btn"
                     ><i class="fa-brands fa-instagram"></i
                   ></a>
-                  <a href="#" class="social-btn"
+                  <a href="https://www.tiktok.com/@moveisdaterra " target="_blank" class="social-btn"
                     ><i class="fa-brands fa-tiktok"></i
                   ></a>
                 </div>
@@ -124,8 +191,227 @@
           </iframe>
         </a>
       </div>
-    </main>
-  </body>
+      <div
+      id="wa-widget"
+      style="
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 9999;
+        font-family: &quot;Poppins&quot;, sans-serif;
+      "
+    >
+      <div
+        id="wa-chat"
+        style="
+          display: none;
+          width: 300px;
+          background: #fff;
+          border-radius: 16px;
+          overflow: hidden;
+          margin-bottom: 12px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        "
+      >
+        <div
+          style="
+            background: #075e54;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          "
+        >
+          <img
+            src="../img/Logo.webp"
+            alt="CRIA+ Móveis Planejados Luanda"
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              object-fit: cover;
+            "
+            loading="lazy"
+          />
+          <div>
+            <p
+              style="margin: 0; color: #fff; font-size: 14px; font-weight: 600"
+            >
+              CRIA+
+            </p>
+            <p
+              id="wa-status"
+              style="margin: 0; color: #acf2b8; font-size: 11px"
+            >
+              online
+            </p>
+          </div>
+          <button
+            onclick="document.getElementById('wa-chat').style.display = 'none'"
+            style="
+              margin-left: auto;
+              background: none;
+              border: none;
+              color: #fff;
+              cursor: pointer;
+              font-size: 18px;
+            "
+          >
+            ✕
+          </button>
+        </div>
 
+        <div
+          id="wa-body"
+          style="background: #e5ddd5; padding: 16px; min-height: 160px"
+        >
+          <div id="wa-typing" style="display: none">
+            <div id="wa-bubble-typing">
+              <span class="wa-dot"></span><span class="wa-dot"></span
+              ><span class="wa-dot"></span>
+            </div>
+          </div>
+          <div id="wa-m1" class="wa-msg">
+            <div class="wa-bubble">
+              Olá! 😊<span class="wa-time">Agora</span>
+            </div>
+          </div>
+          <div id="wa-m2" class="wa-msg">
+            <div class="wa-bubble">
+              Estou aqui para te ajudar 🙂<span class="wa-time">Agora</span>
+            </div>
+          </div>
+          <div id="wa-m3" class="wa-msg">
+            <div class="wa-bubble">
+              Tens alguma dúvida sobre os nossos produtos?<span class="wa-time"
+                >Agora</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="https://wa.me/244956112235?text=Olá!%20Tenho%20interesse%20nos%20vossos%20produtos."
+          target="_blank"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #25d366;
+            padding: 14px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+          "
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+            />
+          </svg>
+          Clique para Responder no WhatsApp
+        </a>
+      </div>
+
+      <button
+        onclick="waOpen()"
+        style="
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background: #25d366;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+          margin-left: auto;
+        "
+      >
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+          />
+        </svg>
+      </button>
+    </div>
+    </main>
+     <footer class="footer">
+      <div id="cards">
+        <section id="footer-inicio">
+          <img
+            src="../img/Logo.webp"
+            alt="CRIA+ Móveis Planejados Luanda"
+            style="height: 90px; margin-bottom: 14px;"
+            loading="lazy"
+          />
+          <p>
+            Design e móveis planejados que transformam<br />
+            seu lar em um ambiente sofisticado e elegante.
+          </p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/cria__mais/" target="_blank" aria-label="Instagram"
+              ><i class="ti ti-brand-instagram"></i
+            ></a>
+            <a href="https://www.facebook.com/profile.php?id=61551887450486&ref=NONE_xav_ig_profile_page_web" aria-label="Facebook"
+              ><i class="ti ti-brand-facebook"></i
+            ></a>
+            <a href="https://www.tiktok.com/@moveisdaterra" aria-label="TikTok"
+              ><i class="ti ti-brand-tiktok"></i
+            ></a>
+          </div>
+        </section>
+
+        <section id="footer-nav">
+          <h2>Navegação</h2>
+          <a href="../index.html">Início</a>
+          <a href="../sobre/sobre.html">Sobre Nós</a>
+          <a href="../servicos/index.html">Serviços</a>
+          <a href="../projeto/projeto.html">Projetos</a>
+          <a href="index.html">Contato</a>
+        </section>
+
+        <section id="footer-serv">
+          <h2>Serviços</h2>
+          <a href="../servicos/index.html">Móveis Planejados</a>
+          <a href="../servicos/index.html">Design de Interiores</a>
+          <a href="../servicos/index.html">Projetos 3D</a>
+          <a href="../servicos/index.html">Consultoria</a>
+          <a href="../servicos/index.html">Execução</a>
+        </section>
+
+        <section id="footer-cont">
+          <h2>Contato</h2>
+          <a href="tel:+244956112235" class="contact-item">
+            <i class="ti ti-phone"></i>
+            <span>(+244) 956 112 235</span>
+          </a>
+          <a href="mailto:criamais@gmail.com" class="contact-item">
+            <i class="ti ti-mail"></i>
+            <span>criamais@gmail.com</span>
+          </a>
+          <a href="#" class="contact-item">
+            <i class="ti ti-map-pin"></i>
+            <span>Pumangol — Madeira<br />Rua 1, Luanda</span>
+          </a>
+        </section>
+      </div>
+
+      <div id="footer-final">
+        <p>© 2026 Cria+. Todos os direitos reservados.</p>
+        <div class="links">
+          <a href="#">Política de Privacidade</a>
+          <span class="sep">|</span>
+          <a href="#">Termos de Uso</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/scrollreveal" defer></script>
   <script src="Js/contacto.js" defer></script>
+  <script src="../Js/main.js" defer></script>
+  <script src="../Js/darkmode.js" defer></script>
 </html>
