@@ -20,8 +20,7 @@
   body {
       
       background: #000;
-      background-color 0.5s,
-      color 0.5s;
+      transition: background-color 0.5s, color 0.5s;
       overflow-y: hidden;
   }
 
