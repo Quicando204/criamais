@@ -3,7 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <!-- SEO BÁSICO -->
+    <title>Contacto | CRIA+ Móveis Planejados em Luanda, Angola</title>
+    <meta
+      name="description"
+      content="Entre em contacto com a CRIA+. Solicite um orçamento, tire dúvidas ou visite-nos em Luanda, Angola. Respondemos em até 24 horas."
+    />
+    <meta
+      name="keywords"
+      content="contacto CRIA+, orçamento móveis planejados Luanda, falar CRIA+ Angola, telefone CRIA+ Luanda"
+    />
+    <meta name="author" content="CRIA+" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://criamais.ao/contacto/" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CRIA+" />
+    <meta
+      property="og:title"
+      content="Contacto | CRIA+ Móveis Planejados em Luanda, Angola"
+    />
+    <meta
+      property="og:description"
+      content="Entre em contacto com a CRIA+. Solicite um orçamento, tire dúvidas ou visite-nos em Luanda, Angola."
+    />
+    <meta property="og:image" content="https://criamais.ao/img/og-home.webp" />
+    <meta property="og:url" content="https://criamais.ao/contacto/" />
+    <meta property="og:locale" content="pt_AO" />
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Contacto | CRIA+ Móveis Planejados em Luanda, Angola"
+    />
+    <meta
+      name="twitter:description"
+      content="Entre em contacto com a CRIA+. Solicite um orçamento, tire dúvidas ou visite-nos em Luanda, Angola."
+    />
+    <meta name="twitter:image" content="https://criamais.ao/img/og-home.webp" />
+
+    <!-- PRECONNECT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- FONTS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -20,10 +68,61 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
     <link rel="stylesheet" href="css/contacto.css" />
     <link rel="stylesheet" href="../Styles/globais.css" />
     <link rel="stylesheet" href="../Styles/animationpage.css" />
     <link rel="stylesheet" href="../Styles/darmode.css" />
+
+    <!-- SCHEMA.ORG -->
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contacto — CRIA+",
+          "description": "Entre em contacto com a CRIA+ para solicitar orçamentos de móveis planejados em Luanda, Angola.",
+          "url": "https://criamais.ao/contacto/",
+          "isPartOf": {
+            "@type": "LocalBusiness",
+            "name": "CRIA+",
+            "telephone": "+244956112235",
+            "email": "criamais@gmail.com",
+            "openingHours": "Mo-Fr 09:00-18:00, Sa 09:00-13:00",
+            "priceRange": "Kz Kz Kz",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Pumangol — Madeira, Rua 1",
+              "addressLocality": "Luanda",
+              "addressCountry": "AO"
+            },
+            "sameAs": [
+              "https://www.instagram.com/cria__mais/",
+              "https://www.facebook.com/profile.php?id=61551887450486",
+              "https://www.tiktok.com/@moveisdaterra"
+            ]
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Início",
+              "item": "https://criamais.ao/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Contacto",
+              "item": "https://criamais.ao/contacto/"
+            }
+          ]
+        }
+      ]
+    </script>
   </head>
 
   <body>
@@ -91,6 +190,7 @@
         </button>
       </div>
     </header>
+
     <main>
       <section id="contactos">
         <!-- FORMULÁRIO -->
@@ -98,12 +198,7 @@
           <h2>Envie a sua mensagem</h2>
           <form action="" method="post">
             <div>
-              <input
-                type="text"
-                name="nome"
-                id="nome"
-                placeholder="Nome "
-              />
+              <input type="text" name="nome" id="nome" placeholder="Nome" />
               <input
                 type="email"
                 name="email"
@@ -124,7 +219,6 @@
             >
               Por favor preenche todos os campos obrigatórios.
             </span>
-
             <button type="button" id="btn-enviar">Enviar Mensagem →</button>
             <p>
               Seus dados estão protegidos. Não compartilhamos suas informações.
@@ -170,18 +264,21 @@
                     href="https://www.facebook.com/profile.php?id=61551887450486&ref=NONE_xav_ig_profile_page_web"
                     target="_blank"
                     class="social-btn"
+                    aria-label="Facebook"
                     ><i class="fa-brands fa-facebook-f"></i
                   ></a>
                   <a
                     href="https://www.instagram.com/cria__mais/"
                     target="_blank"
                     class="social-btn"
+                    aria-label="Instagram"
                     ><i class="fa-brands fa-instagram"></i
                   ></a>
                   <a
-                    href="https://www.tiktok.com/@moveisdaterra "
+                    href="https://www.tiktok.com/@moveisdaterra"
                     target="_blank"
                     class="social-btn"
+                    aria-label="TikTok"
                     ><i class="fa-brands fa-tiktok"></i
                   ></a>
                 </div>
@@ -190,6 +287,7 @@
           </div>
         </div>
       </section>
+
       <div id="mapa">
         <a
           href="https://maps.google.com/?q=38R9+G3J,Viana,Luanda"
@@ -197,12 +295,14 @@
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.927116509717!2d13.315112573558963!3d-8.908682191432087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f794fe0fab1f%3A0xe76d231fd964d21a!2sCRIA%20MAIS!5e1!3m2!1spt-PT!2sao!4v1782220746602!5m2!1spt-PT!2sao"
+            title="Localização CRIA+ em Luanda, Angola"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"
           ></iframe>
         </a>
       </div>
+
       <div
         id="wa-widget"
         style="
@@ -279,7 +379,6 @@
               ✕
             </button>
           </div>
-
           <div
             id="wa-body"
             style="background: #e5ddd5; padding: 16px; min-height: 160px"
@@ -309,7 +408,6 @@
               </div>
             </div>
           </div>
-
           <a
             href="https://wa.me/244956112235?text=Olá!%20Tenho%20interesse%20nos%20vossos%20produtos."
             target="_blank"
@@ -334,7 +432,6 @@
             Clique para Responder no WhatsApp
           </a>
         </div>
-
         <button
           onclick="waOpen()"
           style="
@@ -359,6 +456,7 @@
         </button>
       </div>
     </main>
+
     <footer class="footer">
       <div id="cards">
         <section id="footer-inicio">
@@ -369,8 +467,8 @@
             loading="lazy"
           />
           <p>
-            Design e móveis planejados que transformam<br />
-            seu lar em um ambiente sofisticado e elegante.
+            Design e móveis planejados que transformam<br />seu lar em um
+            ambiente sofisticado e elegante.
           </p>
           <div class="social-icons">
             <a
@@ -418,7 +516,11 @@
             <i class="ti ti-mail"></i>
             <span>criamais@gmail.com</span>
           </a>
-          <a class="contact-item">
+          <a
+            href="https://maps.google.com/?q=38R9+G3J,Viana,Luanda"
+            target="_blank"
+            class="contact-item"
+          >
             <i class="ti ti-map-pin"></i>
             <span>Pumangol — Madeira<br />Rua 1, Luanda</span>
           </a>
@@ -428,15 +530,16 @@
       <div id="footer-final">
         <p>© 2026 Cria+. Todos os direitos reservados.</p>
         <div class="links">
-          <a >Política de Privacidade</a>
+          <a href="#">Política de Privacidade</a>
           <span class="sep">|</span>
-          <a >Termos de Uso</a>
+          <a href="#">Termos de Uso</a>
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+    <script src="Js/contacto.js" defer></script>
+    <script src="../Js/main.js" defer></script>
+    <script src="../Js/darkmode.js"></script>
   </body>
-  <script src="https://unpkg.com/scrollreveal" defer></script>
-  <script src="Js/contacto.js" defer></script>
-  <script src="../Js/main.js" defer></script>
-  <script src="../Js/darkmode.js"></script>
 </html>
