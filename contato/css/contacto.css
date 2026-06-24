@@ -103,7 +103,8 @@ body {
 
 section#contactos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* CORRIGIDO: minmax(400px) → minmax(min(400px, 100%), 1fr) */
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
   gap: 25px;
   padding: 60px;
 }
@@ -279,6 +280,7 @@ form > p {
 .social-btn:hover i {
   color: var(--orange);
 }
+
 #mapa {
   margin: 0 60px 60px;
   border-radius: 14px;
@@ -302,6 +304,22 @@ form > p {
 @media (max-width: 768px) {
   header {
     padding: 0px 25px;
+  }
+
+  section#contactos {
+    padding: 20px;
+  }
+
+  #mapa {
+    margin: 0 20px 40px;
+  }
+
+  #formularios {
+    padding: 24px;
+  }
+
+  #outras-formas {
+    padding: 24px;
   }
 
   #formularios form > div {
