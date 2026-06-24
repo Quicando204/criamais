@@ -5,6 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  overflow-x: hidden;
+}
 :root {
   --bg: #0f0f0f;
   --bg-card: #1a1a1a;
