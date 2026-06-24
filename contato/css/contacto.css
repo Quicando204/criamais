@@ -304,6 +304,10 @@ form > p {
     padding: 0px 25px;
   }
 
+  #formularios form > div {
+    flex-direction: column;
+  }
+
   nav {
     position: absolute;
     top: 85px;
