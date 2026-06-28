@@ -418,7 +418,11 @@ textarea {
   pointer-events: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+
+  body{
+     overflow-x: hidden;
+  }
   .card {
     padding: 1.75rem 1.25rem;
   }
