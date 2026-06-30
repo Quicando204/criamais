@@ -403,6 +403,24 @@ textarea {
   border-radius: 10px;
   animation: carregar 2s ease forwards;
 }
+#voltar {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  padding: 10px;
+}
+#voltar a {
+  display: block;
+  margin: auto;
+  border: 0.5px solid #c9a96e;
+  border-radius: 50%;
+}
+#img-voltar {
+  width: 35px;
+  height: 35px;
+  display: block;
+  margin: auto;
+}
 
 @keyframes carregar {
   from {
