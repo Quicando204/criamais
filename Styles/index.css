@@ -189,9 +189,11 @@
   /* CONTEÚDO FICA POR CIMA */
   #texto-hero,
   .botoes {
+    
       position: relative;
       z-index: 2;
   }
+  
 
   /* DOTS */
   .hero-dots {
@@ -223,6 +225,7 @@
 
   .hero-title {
       font-size: 1.4em;
+      
   }
 
   .hero-title h1 {
@@ -238,6 +241,7 @@
 
   .paragrafos {
       line-height: 30px;
+      
   }
 
   .paragrafos p {

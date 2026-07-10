@@ -194,7 +194,7 @@ ScrollReveal().reveal(".footer", {
 
 ScrollReveal().reveal(".box", {
   duration:2000,
-  origin:Mobile ? "left":"bottom",
+  origin: Mobile ? "left":"bottom",
   distance:"90px",
   delay:50, 
   interval:900

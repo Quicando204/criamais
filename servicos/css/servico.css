@@ -297,6 +297,7 @@ main > h1 {
   gap: 10px;
 }
 
+
 #d-texto > div:first-child h2::after {
   content: "";
   display: block;
@@ -623,6 +624,8 @@ article#passos {
 #titulo h1 {
   color: #fff;
 }
+
+
 
 /* ══════════════════════════════
            RESPONSIVO
