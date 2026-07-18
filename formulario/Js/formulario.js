@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     loader.classList.add("hide");
     setTimeout(() => {
-      loader.style.display = "none";
+      loader.style.display ="none";
     }, 500);
   }, 2000); // duração igual à animação da barra
 });
