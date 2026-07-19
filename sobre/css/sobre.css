@@ -104,8 +104,8 @@
         gap: 50px;
         align-items: center;
         padding: 50px 0;
-        height: 100vh;
-        margin-bottom: 90px
+        
+        
       }
       .subtitulo {
         color: var(--laranja);
@@ -264,11 +264,14 @@
         .secao-cta {
           grid-template-columns: 1fr;
         }
+        
       }
       @media (max-width: 768px) {
         header {
           padding: 0px 25px;
         }
+
+       
 
         nav {
           position: absolute;
