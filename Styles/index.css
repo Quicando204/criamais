@@ -325,6 +325,7 @@
       justify-content: center;
       gap: 60px;
       
+      
   }
 
   #imagem-historia {
@@ -347,6 +348,7 @@
       border-radius: 12px;
       display: block;
       transition: all 0.3s ease;
+     
   }
 
   #historia-texto {
@@ -793,6 +795,14 @@
           font-size: 11px;
           padding: 10px 6px;
           letter-spacing: 0;
+      }
+
+      #historia {
+          height: 100vh;
+      }
+      #historia-imgem {
+          flex: 1;
+          align-self: flex-end;
       }
 
   }
