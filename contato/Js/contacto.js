@@ -17,7 +17,7 @@ btn.addEventListener("click", function () {
     valido = false;
   }
   if (!telefone.value.trim()) {
-    email.style.borderColor = "#e55";
+    telefone.style.borderColor = "#e55";
     valido = false;
   }
   if (!msg.value.trim()) {
