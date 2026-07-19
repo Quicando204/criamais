@@ -324,6 +324,7 @@
       align-items: center;
       justify-content: center;
       gap: 60px;
+      margin: 80px 0;
       height: 100vh;
   }
 
