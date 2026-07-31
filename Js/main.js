@@ -212,3 +212,11 @@ ScrollReveal().reveal("#funciona", {
   origin:"top",
   distance:"90px"
 })
+ScrollReveal().reveal(".cards", {
+        distance: '40px',
+        duration: 1000,
+        delay: 550,
+        origin: 'bottom',
+        interval: 900,
+        reset: false
+})
