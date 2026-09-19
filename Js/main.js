@@ -1,10 +1,9 @@
-
 // ============================================
 // MENU HAMBURGER — todas as páginas
 // ============================================
 const burguer = document.getElementById("burguer");
 const navMenu = document.getElementById("menu"); // renomeado para não conflituar
-const icon    = document.getElementById("icon");
+const icon = document.getElementById("icon");
 
 if (burguer) {
   burguer.addEventListener("click", () => {
@@ -40,59 +39,58 @@ ScrollReveal().reveal(".efeito-txt-topo", {
 const paginaSobre = document.getElementById("sobre");
 
 if (paginaSobre) {
-
   // Menu hamburger diferente do sobre
   const botaoMenu = document.getElementById("botao-menu");
   if (botaoMenu) {
     botaoMenu.addEventListener("click", () =>
-      navMenu.classList.toggle("ativo")
+      navMenu.classList.toggle("ativo"),
     );
   }
 
-  // Contadores 
- let contadoresIniciados = false;
+  // Contadores
+  let contadoresIniciados = false;
 
-ScrollReveal().reveal(".estatisticas", {
-  duration: 2000,
-  distance: "90px",
-  origin: Mobile ? "left" : "top",
+  ScrollReveal().reveal(".estatisticas", {
+    duration: 2000,
+    distance: "90px",
+    origin: Mobile ? "left" : "top",
 
-  beforeReveal: function () {
-    if (contadoresIniciados) return;
-    contadoresIniciados = true;
+    beforeReveal: function () {
+      if (contadoresIniciados) return;
+      contadoresIniciados = true;
 
-    const percentagem = document.getElementById("numero-percentagem");
-    if (percentagem) {
-      let contagem = 0;
+      const percentagem = document.getElementById("numero-percentagem");
+      if (percentagem) {
+        let contagem = 0;
 
-      const timer1 = setInterval(() => {
-        contagem++;
-        percentagem.textContent = `${contagem}%`;
+        const timer1 = setInterval(() => {
+          contagem++;
+          percentagem.textContent = `${contagem}%`;
 
-        if (contagem >= 100) {
-          clearInterval(timer1);
-        }
-      }, 45);
-    }
+          if (contagem >= 100) {
+            clearInterval(timer1);
+          }
+        }, 45);
+      }
 
-    const numeroProjeto = document.getElementById("numero-projeto");
-    if (numeroProjeto) {
-      let contagem2 = 0;
+      const numeroProjeto = document.getElementById("numero-projeto");
+      if (numeroProjeto) {
+        let contagem2 = 0;
 
-      const timer2 = setInterval(() => {
-        contagem2++;
-        numeroProjeto.textContent = `+${contagem2} Projetos`;
+        const timer2 = setInterval(() => {
+          contagem2++;
+          numeroProjeto.textContent = `+${contagem2} Projetos`;
 
-        if (contagem2 >= 150) {
-          clearInterval(timer2);
-        }
-      }, 30);
-    }
-  }
-});
+          if (contagem2 >= 150) {
+            clearInterval(timer2);
+          }
+        }, 30);
+      }
+    },
+  });
 
   // Scroll reveal específico do sobre
-  
+
   ScrollReveal().reveal(".efeito-txt-topo", {
     duration: 2000,
     distance: "90px",
@@ -104,119 +102,168 @@ ScrollReveal().reveal(".estatisticas", {
     distance: "90px",
     origin: "top",
   });
-
-  
-  
 }
 
 var waStarted = false;
 function waOpen() {
-  var chat = document.getElementById('wa-chat');
-  chat.style.display = chat.style.display === 'none' ? 'block' : 'none';
-  if (!waStarted && chat.style.display === 'block') {
+  var chat = document.getElementById("wa-chat");
+  chat.style.display = chat.style.display === "none" ? "block" : "none";
+  if (!waStarted && chat.style.display === "block") {
     waStarted = true;
     waSequence();
   }
 }
 function waShowMsg(id) {
-  return new Promise(function(res) {
-    var typing = document.getElementById('wa-typing');
-    document.getElementById('wa-status').textContent = 'a digitar...';
-    typing.style.display = 'block';
-    setTimeout(function() {
-      typing.style.display = 'none';
-      document.getElementById(id).style.display = 'block';
+  return new Promise(function (res) {
+    var typing = document.getElementById("wa-typing");
+    document.getElementById("wa-status").textContent = "a digitar...";
+    typing.style.display = "block";
+    setTimeout(function () {
+      typing.style.display = "none";
+      document.getElementById(id).style.display = "block";
       res();
     }, 1400);
   });
 }
 async function waSequence() {
-  await waShowMsg('wa-m1');
-  await new Promise(r => setTimeout(r, 500));
-  await waShowMsg('wa-m2');
-  await new Promise(r => setTimeout(r, 500));
-  await waShowMsg('wa-m3');
-  document.getElementById('wa-status').textContent = 'online';
+  await waShowMsg("wa-m1");
+  await new Promise((r) => setTimeout(r, 500));
+  await waShowMsg("wa-m2");
+  await new Promise((r) => setTimeout(r, 500));
+  await waShowMsg("wa-m3");
+  document.getElementById("wa-status").textContent = "online";
 }
 
-
 // SCROLL REVEAL — Projetos
-const paginaProjeto = document.querySelector('.filterable_cards');
+const paginaProjeto = document.querySelector(".filterable_cards");
 
 if (paginaProjeto) {
-    ScrollReveal().reveal('.card', {
-        distance: '40px',
-        duration: 600,
-        delay: 150,
-        origin: 'bottom',
-        interval: 100,
-        reset: false
-    });
+  ScrollReveal().reveal(".card", {
+    distance: "40px",
+    duration: 600,
+    delay: 150,
+    origin: "bottom",
+    interval: 100,
+    reset: false,
+  });
 }
 
 ScrollReveal().reveal(".cta-banner", {
   duration: 2000,
   origin: "top",
-  delay:1000
-})
+  delay: 1000,
+});
 
-const paginaDepoimento = document.querySelector('.cards');
-if(paginaDepoimento){
-ScrollReveal().reveal(".cards", {
-        distance: '40px',
-        duration: 1000,
-        delay: 550,
-        origin: 'bottom',
-        interval: 900,
-        reset: false
-})
+const paginaDepoimento = document.querySelector(".cards");
+if (paginaDepoimento) {
+  ScrollReveal().reveal(".cards", {
+    distance: "40px",
+    duration: 1000,
+    delay: 550,
+    origin: "bottom",
+    interval: 900,
+    reset: false,
+  });
 }
 
 ScrollReveal().reveal("#inicio-img", {
   duration: 2000,
   origin: "right",
-  delay:1000,
-  distance: "90px"
-})
+  delay: 1000,
+  distance: "90px",
+});
 
 ScrollReveal().reveal(".servicos-wrapper", {
-  duration:2000,
-  origin:"bottom",
-  distance:"90px"
-})
+  duration: 2000,
+  origin: "bottom",
+  distance: "90px",
+});
 
 ScrollReveal().reveal(".footer", {
-  duration:2000,
-  origin:"bottom",
-  distance:"90px",
-  delay:50
-})
+  duration: 2000,
+  origin: "bottom",
+  distance: "90px",
+  delay: 50,
+});
 
 ScrollReveal().reveal(".box", {
-  duration:2000,
-  origin: Mobile ? "left":"bottom",
-  distance:"90px",
-  delay:50, 
-  interval:900
-})
+  duration: 2000,
+  origin: Mobile ? "left" : "bottom",
+  distance: "90px",
+  delay: 50,
+  interval: 900,
+});
 
-ScrollReveal().reveal ("#d-img", {
-  duration:2000,
+ScrollReveal().reveal("#d-img", {
+  duration: 2000,
   origin: Mobile ? "bottom" : "right",
   distance: "90px",
-  delay:50
-})
+  delay: 50,
+});
 
 ScrollReveal().reveal("#funciona", {
-  duration:2000,
-  origin:"top",
-  distance:"90px"
-})
-ScrollReveal().reveal(".cards", {
-        distance: '40px',
-        duration: 1000,
-        delay: 550,
-        origin: 'bottom',
-        interval: 900,
-        reset: false
-})
+  duration: 2000,
+  origin: "top",
+  distance: "90px",
+});
+ScrollReveal().reveal(".card", {
+  distance: "40px",
+  duration: 1000,
+  delay: 550,
+  origin: Mobile ? "left" : "bottom",
+  interval: 900,
+  reset: false,
+});
+ScrollReveal().reveal(".secao-valores", {
+  distance: "40px",
+  duration: 1000,
+  delay: 550,
+  origin: Mobile ? "left" : "bottom",
+  interval: 900,
+  reset: false,
+});
+const sr = ScrollReveal();
+
+const totalItens = document.querySelectorAll(".item-valor").length;
+const duracao = 1000;
+const intervalo = 500;
+const delayItens = 300;
+
+const fimDosItens = delayItens + (totalItens - 1) * intervalo + duracao;
+
+sr.reveal(".item-valor", {
+  distance: "40px",
+  duration: duracao,
+  delay: delayItens,
+  origin: "left",
+  interval: intervalo,
+  reset: false,
+});
+
+sr.reveal(".imagem-destaque", {
+  distance: "60px",
+  duration: 1000,
+  delay: fimDosItens,
+  origin: Mobile ? "left" : "right",
+  reset: false,
+});
+
+const base = {
+  distance: "30px",
+  duration: 800,
+  origin: "bottom",
+  easing: "ease-out",
+  reset: false,
+};
+
+sr.reveal(".hero-titulo", { ...base, delay: 100 });
+sr.reveal("linha", {
+  ...base,
+  delay: 300,
+  distance: "0px",
+  scale: 0.6,
+  origin: "left",
+});
+sr.reveal(".hero-texto", { ...base, delay: 450 });
+sr.reveal(".botoes a", { ...base, delay: 650, interval: 150 });
+sr.reveal(".imagem-cta", { ...base, delay: 900, distance: "50px" });

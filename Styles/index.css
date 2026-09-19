@@ -324,6 +324,7 @@
       align-items: center;
       justify-content: center;
       gap: 60px;
+     height: 100vh;
   }
 
   #imagem-historia {
@@ -793,6 +794,9 @@
           padding: 10px 6px;
           letter-spacing: 0;
       }
+      #historia {
+         height: auto;
+      }
 
   }
 
@@ -803,6 +807,9 @@
 
       #hero {
           min-height: 90vh;
+      }
+     #historia {
+         height: auto;
       }
 
       nav {
@@ -854,6 +861,7 @@
           flex-direction: column;
           text-align: center;
           padding: 50px 20px;
+          height: auto;
       }
 
       #hero {
