@@ -46,6 +46,9 @@ filterableCards.forEach((card, i) => {
         const indexVisivel = visiveis.indexOf(card);
         abrirLightbox(indexVisivel);
     });
+    card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+    });
 });
 
 // Teclado

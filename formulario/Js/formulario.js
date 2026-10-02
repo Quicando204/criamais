@@ -1,12 +1,13 @@
 window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
+  if (!loader) return;
 
   setTimeout(() => {
     loader.classList.add("hide");
     setTimeout(() => {
       loader.style.display ="none";
     }, 500);
-  }, 2000); // duração igual à animação da barra
+  }, 900); // duração igual à animação da barra (ver .loader-barra no CSS)
 });
 
 // Número WhatsApp da CRIA+
@@ -55,7 +56,12 @@ function enviarWhatsApp() {
   msg += `\n_Enviado via formulário do site CRIA+_`;
 
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-  window.open(url, "_blank");
+  const janela = window.open(url, "_blank");
+  if (!janela) {
+    // popup bloqueado: abre o WhatsApp na mesma aba
+    window.location.href = url;
+    return;
+  }
 
   document.getElementById("form-area").style.display = "none";
   document.getElementById("success-area").style.display = "block";

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  if (typeof Typed === "undefined") return;
   new Typed(".txt-animado-sobre strong", {
     strings: ["projeto.", "necessidade.", "cliente.", "ambiente."],
     typeSpeed: 80,

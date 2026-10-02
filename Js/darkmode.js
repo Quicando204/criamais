@@ -1,3 +1,4 @@
+(function () {
 const btn = document.getElementById('btn-tema')
 const body = document.querySelector('body')
 const imagemModo = document.querySelector('.imagem-modo')
@@ -8,7 +9,7 @@ if (localStorage.getItem('darkmode') === 'true') {
   if (imagemModo) imagemModo.src = '../img/escritorio-preto.webp'
 }
 
-btn.addEventListener('click', () => {
+if (btn) btn.addEventListener('click', () => {
   body.classList.toggle('dark')
   const modoActivo = body.classList.contains('dark')
   localStorage.setItem('darkmode', modoActivo)
@@ -16,3 +17,4 @@ btn.addEventListener('click', () => {
     imagemModo.src = modoActivo ? '../img/escritorio-preto.webp' : '../img/escritorio.webp'
   }
 })
+})();

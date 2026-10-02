@@ -133,7 +133,7 @@
         </div>
         <div class="tagline">Interior Design</div>
         <div class="divider"></div>
-        <div class="title">Solicitar Orçamento</div>
+        <div class="title" role="heading" aria-level="1">Solicitar Orçamento</div>
       </div>
 
       <div class="card">
@@ -142,7 +142,7 @@
             <div class="section-label">Dados de Contacto</div>
             <div class="row">
               <div class="field">
-                <label>Nome *</label>
+                <label for="nome">Nome *</label>
                 <input
                   type="text"
                   id="nome"
@@ -151,7 +151,7 @@
                 />
               </div>
               <div class="field">
-                <label>Telefone *</label>
+                <label for="telefone">Telefone *</label>
                 <input
                   type="tel"
                   id="telefone"
@@ -161,7 +161,7 @@
               </div>
             </div>
             <div class="field">
-              <label>Email (Opcional)</label>
+              <label for="email">Email (Opcional)</label>
               <input type="email" id="email" placeholder="email@exemplo.com" />
             </div>
           </div>
@@ -170,7 +170,7 @@
             <div class="section-label">Detalhes do Projecto</div>
 
             <div class="field">
-              <label>Tipo de Espaço *</label>
+              <label for="espaco">Tipo de Espaço *</label>
               <select id="espaco">
                 <option value="" disabled selected>
                   Seleccione o tipo de espaço
@@ -230,11 +230,11 @@
 
             <div class="row">
               <div class="field">
-                <label>Área aproximada (m²)</label>
+                <label for="area">Área aproximada (m²)</label>
                 <input type="number" id="area" placeholder="Ex: 80" min="1" />
               </div>
               <div class="field">
-                <label>Orçamento disponível</label>
+                <label for="orcamento">Orçamento disponível</label>
                 <select id="orcamento">
                   <option value="" disabled selected>Seleccione</option>
                   <option value="Menos de 500.000 Kz">
@@ -255,7 +255,7 @@
             </div>
 
             <div class="field">
-              <label>Prazo desejado</label>
+              <label for="prazo">Prazo desejado</label>
               <select id="prazo">
                 <option value="" disabled selected>
                   Quando precisa do projecto?
@@ -271,7 +271,7 @@
             </div>
 
             <div class="field">
-              <label>Descreva o seu projecto</label>
+              <label for="descricao">Descreva o seu projecto</label>
               <textarea
                 id="descricao"
                 placeholder="Conte-nos mais sobre o seu espaço, estilo que prefere, referências, ou qualquer detalhe que considere importante..."
@@ -313,8 +313,8 @@
           </div>
           <h3>Pedido enviado!</h3>
           <p>
-            O seu orçamento foi enviado com sucesso.<br />A equipa CRIA+ entrará
-            em contacto brevemente.
+            Abrimos o WhatsApp com o seu pedido.<br />Envie a mensagem lá para
+            concluir. A equipa CRIA+ responde em breve.
           </p>
         </div>
       </div>

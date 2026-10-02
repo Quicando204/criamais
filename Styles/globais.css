@@ -192,3 +192,6 @@ footer {
   color: #333333;
 }
 
+
+/* #burguer agora é <button>: manter o aspeto anterior */
+:where(button#burguer){background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer}

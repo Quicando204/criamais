@@ -18,7 +18,7 @@ const slides = document.querySelectorAll(".hero-slide");
         irParaSlide((atual + 1) % slides.length);
       }, 4000);
 
-       new Typed(".txt-animado-inicio strong", {
+       if (typeof Typed !== "undefined") new Typed(".txt-animado-inicio strong", {
         strings: [
           "transforma.",
           "constrói.",

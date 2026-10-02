@@ -401,7 +401,7 @@ textarea {
   width: 0%;
   background: #d88916;
   border-radius: 10px;
-  animation: carregar 2s ease forwards;
+  animation: carregar 0.9s ease forwards;
 }
 #voltar {
   position: absolute;

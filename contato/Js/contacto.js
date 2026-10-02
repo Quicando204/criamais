@@ -1,3 +1,4 @@
+(function () {
 const btn = document.getElementById("btn-enviar");
 const erro = document.getElementById("form-erro");
 const nome = document.getElementById("nome");
@@ -49,11 +50,15 @@ ${msg.value.trim()}`;
   const numero = "244956112235";
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 
+  // abre dentro do clique (antes de qualquer atraso) para não ser bloqueado
+  const janela = window.open(url, "_blank");
+  if (!janela) window.location.href = url; // popup bloqueado: navega na mesma aba
+
   setTimeout(() => {
-    window.open(url, "_blank");
     // Reset botão
     btn.textContent = "Enviar Mensagem →";
     btn.style.background = "";
     btn.disabled = false;
   }, 1000);
 });
+})();

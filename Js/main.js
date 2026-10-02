@@ -19,6 +19,13 @@ if (burguer) {
 // ============================================
 const Mobile = window.innerWidth <= 768;
 
+// Se a CDN do ScrollReveal falhar, o site continua a funcionar sem animações
+if (typeof ScrollReveal === "undefined") {
+  window.ScrollReveal = function () {
+    return { reveal: function () { return this; } };
+  };
+}
+
 ScrollReveal({ reset: true }).reveal(".efeito-img-topo", {
   distance: "90px",
   duration: 2000,
