@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página não encontrada | CRIA+ Móveis Planejados</title>
+  <meta name="description" content="A página que procura não existe ou mudou de endereço. Volte ao início da CRIA+ ou veja os nossos projetos de móveis planejados em Luanda." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" href="/favicon/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+  <style>
+    /* Autónomo: usa caminhos absolutos porque o 404 pode ser servido em qualquer profundidade de URL */
+    :root { --bg:#f0ece5; --ink:#111111; --muted:#5b554d; --accent:#d88916; --accent-d:#b9730f; --line:#d0c8c0; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.6; display: flex; flex-direction: column;
+    }
+    header { padding: 12px 24px; }
+    header img { width: 150px; height: auto; display: block; margin: -22px 0 -26px -14px; }
+    main { flex: 1; display: grid; place-items: center; padding: 24px; }
+    .box { max-width: 560px; width: 100%; }
+    .code { font-size: clamp(5rem, 22vw, 9rem); font-weight: 700; line-height: 1; margin: 0; color: var(--ink); }
+    .code span { color: var(--accent); }
+    h1 { font-size: clamp(1.4rem, 4vw, 1.9rem); font-weight: 600; margin: 12px 0 8px; }
+    p { margin: 0 0 24px; color: var(--muted); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+    .btn {
+      display: inline-block; padding: 12px 24px; border-radius: 4px; text-decoration: none;
+      font-weight: 500; font-size: .95rem; border: 2px solid var(--accent); transition: background .2s, color .2s;
+    }
+    .btn-main { background: var(--accent); color: #fff; }
+    .btn-main:hover { background: var(--accent-d); border-color: var(--accent-d); }
+    .btn-alt { color: var(--ink); background: transparent; }
+    .btn-alt:hover { background: var(--accent); color: #fff; }
+    nav { border-top: 1px solid var(--line); padding-top: 20px; }
+    nav p { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; }
+    nav a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--accent); }
+    nav a:hover { color: var(--accent-d); }
+    a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+    footer { padding: 16px 24px; font-size: .8rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/" aria-label="CRIA+ — página inicial"><img src="/img/Logo.webp" alt="CRIA+" width="452" height="315" /></a>
+  </header>
+
+  <main>
+    <div class="box">
+      <p class="code" aria-hidden="true">4<span>0</span>4</p>
+      <h1>Esta página não existe</h1>
+      <p>O endereço pode ter mudado ou ter sido escrito de forma diferente. Volte ao início ou veja o que fazemos.</p>
+      <div class="actions">
+        <a class="btn btn-main" href="/">Voltar ao início</a>
+        <a class="btn btn-alt" href="/projeto/">Ver projetos</a>
+      </div>
+      <nav aria-label="Páginas do site">
+        <p>Páginas do site</p>
+        <ul>
+          <li><a href="/servicos/">Serviços</a></li>
+          <li><a href="/projeto/">Projetos</a></li>
+          <li><a href="/sobre/">Sobre nós</a></li>
+          <li><a href="/contato/">Contacto</a></li>
+          <li><a href="https://wa.me/244956112235" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+  <footer>CRIA+ Móveis Planejados · Luanda, Angola</footer>
+</body>
+</html>
